@@ -10,8 +10,7 @@ this.chore = data.chore || []
         let template = 
         `
         <div class="col-4 justify-content-center">
-                <h1>${this.title}</h1>
-            
+                <h1>${this.title}</h1>  
         `
     template += this.drawChores(index)
     template +=  ` <form onsubmit="app.controllers.listController.addChore(event, ${index})"> 
@@ -21,6 +20,7 @@ this.chore = data.chore || []
                 </div>
                 <button type="submit">+</button>
               </form>
+              <button type ="button" onclick="app.controllers.listController.deleteList(${index})"> X </button>
         </div>
 `
         return template

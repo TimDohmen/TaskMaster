@@ -11,6 +11,17 @@ export default class ValuesService {
     addChore(newChore, listIndex) {
         _state.lists[listIndex].chore.push(newChore)
     }
+    deleteChore(listIndex, choreIndex) {
+        if (window.confirm("Do you really want to delete your chore")) {
+            _state.lists[listIndex].chore.splice(choreIndex, 1)
+        }
+    }
+    deleteList(index) {
+        if (window.confirm("Do you really want to delete your list?")) {
+            _state.lists.splice(index, 1)
+        }
+    }
+
     //TODO  Here is where we handle all of our data manipulation, 
     //given the information you need in the controller, 
     //what methods will be required to support that functionality?
