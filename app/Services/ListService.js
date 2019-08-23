@@ -12,11 +12,33 @@ export default class ValuesService {
         _state.lists[listIndex].chore.push(newChore)
         this.saveLists()
     }
-    deleteChore(listIndex, choreIndex) {
-        if (window.confirm("Do you really want to delete your chore")) {
-            _state.lists[listIndex].chore.splice(choreIndex, 1)
-        }
-        this.saveLists()
+    deleteChore(listIndex, choreIndex, callback) {
+        swal({
+            title: "Are you sure?",
+            text: "Once deleted, you will not be able to recover this imaginary file!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+            .then((willDelete) => {
+                if (willDelete) {
+                    _state.lists[listIndex].chore.splice(choreIndex, 1)
+                    this.saveLists()
+                    callback()
+                    swal("Poof! Your imaginary file has been deleted!", {
+                        icon: "success",
+                    })
+                        ;
+                } else {
+                    this.saveLists()
+                    swal("Your imaginary file is safe!");
+                }
+            });
+
+        // if (window.confirm("Do you really want to delete your chore")) {
+        //     _state.lists[listIndex].chore.splice(choreIndex, 1)
+        // }
+        // this.saveLists()
     }
     deleteList(index) {
         if (window.confirm("Do you really want to delete your list?")) {

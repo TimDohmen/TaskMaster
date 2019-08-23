@@ -47,7 +47,7 @@ export default class ListController {
         _drawLists()
     }
     deleteChore(listIndex, choreIndex) {
-        _listService.deleteChore(listIndex, choreIndex)
+        _listService.deleteChore(listIndex, choreIndex, _drawLists)
         _drawLists()
     }
 
