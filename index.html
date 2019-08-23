@@ -13,16 +13,19 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 text-center">
-                <form onsubmit="app.controllers.listController.makeList(event)">
-                    <div class="form-group">
-                        <label for="title">New List Name</label>
-                        <input type="text" class="form-control" name="title" placeholder="New List" id="title" required>
-                    </div>
-                    <button class="btn btn-primary" type="submit">Submit</button>
-                </form>
-                <div id="lists" class="row">
+            <div class="col-12">
+                <div class="col-12">
+                    <form onsubmit="app.controllers.listController.makeList(event)" class="text-center">
+                        <div class="form-group">
+                            <label for="title">New List Name</label>
+                            <input type="text" class="form-control" name="title" placeholder="New List" id="title"
+                                required>
+                        </div>
+                        <button class="btn btn-primary" type="submit">Submit</button>
+                    </form>
+                    <div id="lists" class="row">
 
+                    </div>
                 </div>
             </div>
         </div>

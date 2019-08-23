@@ -1,0 +1,14 @@
+.remover{
+  cursor: pointer;
+  color: red;
+  
+}
+
+.removeButton{
+  margin: auto;
+}
+
+.addButton{
+  margin-bottom: 1vh;
+  margin-right: -.5vw;
+}

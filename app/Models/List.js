@@ -2,34 +2,35 @@ export default class List {
     //TODO You will need to create a constructor 
     //and the methods needed to create the view template for this model
     constructor(data) {
-this.title = data.title
-this.chore = data.chore || []
+        this.title = data.title
+        this.chore = data.chore || []
     }
 
-    getTemplate(index){
-        let template = 
-        `
-        <div class="col-4 justify-content-center">
-                <h1>${this.title}</h1>  
-        `
-    template += this.drawChores(index)
-    template +=  ` <form onsubmit="app.controllers.listController.addChore(event, ${index})"> 
+    getTemplate(index) {
+        let template =
+            `
+        <div class="col-4 justify-content-center border">
+                <h1 class="text-center">${this.title}</h1>  
+        <ul>`
+        template += this.drawChores(index)
+        template += ` </ul>
+        <form onsubmit="app.controllers.listController.addChore(event, ${index})"> 
               <div class="form-group">
                 <label for="chore"></label>
                 <input type="text" class="form-control" name="chore" placeholder="Chores To Do" required>
                 </div>
-                <button type="submit">+</button>
+                <button type="submit" class = "btn btn-info float-right addButton"> + </button>
               </form>
-              <button type ="button" onclick="app.controllers.listController.deleteList(${index})"> X </button>
+              <button type ="button" onclick="app.controllers.listController.deleteList(${index})" class ="btn btn-danger float-left removeButton" > X </button>
         </div>
 `
         return template
     }
 
-    drawChores(listIndex){
+    drawChores(listIndex) {
         let choreTemplate = ""
         this.chore.forEach((c, choreIndex) => {
-            choreTemplate += `<li>${c}<span onclick="app.controllers.listController.deleteChore(${listIndex}, ${choreIndex})">  X  </span></li>`
+            choreTemplate += `<li>${c}<span onclick="app.controllers.listController.deleteChore(${listIndex}, ${choreIndex})" class = "remover">  X  </span></li>`
         });
         return choreTemplate
     }

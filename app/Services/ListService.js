@@ -10,16 +10,19 @@ let _state = {
 export default class ValuesService {
     addChore(newChore, listIndex) {
         _state.lists[listIndex].chore.push(newChore)
+        this.saveLists()
     }
     deleteChore(listIndex, choreIndex) {
         if (window.confirm("Do you really want to delete your chore")) {
             _state.lists[listIndex].chore.splice(choreIndex, 1)
         }
+        this.saveLists()
     }
     deleteList(index) {
         if (window.confirm("Do you really want to delete your list?")) {
             _state.lists.splice(index, 1)
         }
+        this.saveLists()
     }
 
     //TODO  Here is where we handle all of our data manipulation, 
@@ -29,6 +32,7 @@ export default class ValuesService {
     makeList(newList) {
         _state.lists.push(new List(newList))
         console.log(_state.lists)
+        this.saveLists()
     }
 
     get List() {
