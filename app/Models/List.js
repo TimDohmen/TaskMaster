@@ -14,14 +14,20 @@ export default class List {
         <ul>`
         template += this.drawChores(index)
         template += ` </ul>
-        <form onsubmit="app.controllers.listController.addChore(event, ${index})"> 
-              <div class="form-group">
-                <label for="chore"></label>
-                <input type="text" class="form-control" name="chore" placeholder="Chores To Do" required>
-                </div>
-                <button type="submit" class = "btn btn-info float-right addButton"> + </button>
-              </form>
-              <button type ="button" onclick="app.controllers.listController.deleteList(${index})" class ="btn btn-danger float-left removeButton" > X </button>
+        <form onsubmit="app.controllers.listController.addChore(event, ${index})" class="form-inline justify-content-center"> 
+        <div class="form-group">
+        <label for="chore"></label>
+        <input type="text" class="form-control" name="chore" placeholder="Chores To Do" required>
+        
+        
+        </div>
+        
+        <button type="submit" class = "btn btn-info float-right"> Add
+        <button type ="button" onclick="app.controllers.listController.deleteList(${index})" class ="btn btn-danger float-left removeButton" > Remove List </button>
+             </button>
+
+                </form>
+              
         </div>
 `
         return template
