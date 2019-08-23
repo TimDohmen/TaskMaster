@@ -8,11 +8,21 @@ let _state = {
 
 //Public
 export default class ValuesService {
+    addChore(newChore, listIndex) {
+        _state.lists[listIndex].chore.push(newChore)
+    }
     //TODO  Here is where we handle all of our data manipulation, 
     //given the information you need in the controller, 
     //what methods will be required to support that functionality?
 
+    makeList(newList) {
+        _state.lists.push(new List(newList))
+        console.log(_state.lists)
+    }
 
+    get List() {
+        return _state.lists.map(list => new List(list))
+    }
 
 
     //NOTE You will need this code to persist your data into local storage, these methods should not require changing
