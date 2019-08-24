@@ -5,7 +5,6 @@ export default class List {
         this.title = data.title
         this.chore = data.chore || []
     }
-
     getTemplate(index) {
         let template =
             `
@@ -18,21 +17,15 @@ export default class List {
         <div class="form-group">
         <label for="chore"></label>
         <input type="text" class="form-control" name="chore" placeholder="Chores To Do" required>
-        
-        
         </div>
-        
         <button type="submit" class = "btn btn-info float-right"> Add
         <button type ="button" onclick="app.controllers.listController.deleteList(${index})" class ="btn btn-danger float-left removeButton" > Remove List </button>
              </button>
-
                 </form>
-              
-        </div>
+               </div>
 `
         return template
     }
-
     drawChores(listIndex) {
         let choreTemplate = ""
         this.chore.forEach((c, choreIndex) => {
