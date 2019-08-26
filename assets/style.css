@@ -12,3 +12,22 @@ margin-left: auto
   margin-bottom: 1vh;
   margin-right: -.5vw;
 }
+
+.body{
+  background-color: #f0d78c;
+  color: #64c4ed;
+}
+
+.box{
+  background-color: #fcfafa;
+  color: #64c4ed;
+  padding-bottom: 5px ;
+}
+
+.textBox{
+  margin-left: 20vw;
+  margin-right: 20vw;
+}
+.smallText{
+  color: #4f81c7;
+}

@@ -8,9 +8,9 @@ export default class List {
     getTemplate(index) {
         let template =
             `
-        <div class="col-4 justify-content-center border">
-                <h1 class="text-center">${this.title}</h1>  
-        <ul>`
+        <div class="col-12-sm col-4-md justify-content-center border box">
+                <h3 class="text-center">${this.title}</h3>  
+        <ul class="smallText">`
         template += this.drawChores(index)
         template += ` </ul>
         <form onsubmit="app.controllers.listController.addChore(event, ${index})" class="form-inline justify-content-center"> 

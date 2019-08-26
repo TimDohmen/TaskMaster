@@ -7,23 +7,23 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/style.css">
-    <title>Listmon</title>
+    <title>Listerizer</title>
 </head>
 
-<body>
+<body class="body">
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
                 <div class="col-12">
-                    <form onsubmit="app.controllers.listController.makeList(event)" class="text-center">
+                    <form onsubmit="app.controllers.listController.makeList(event)" class="text-center textBox">
                         <div class="form-group">
-                            <label for="title">New List Name</label>
+                            <label for="title">Create New List</label>
                             <input type="text" class="form-control" name="title" placeholder="New List" id="title"
                                 required>
                         </div>
                         <button class="btn btn-primary" type="submit">Submit</button>
                     </form>
-                    <div id="lists" class="row">
+                    <div id="lists" class="row justify-content-center pt-3">
 
                     </div>
                 </div>
