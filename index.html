@@ -10,22 +10,19 @@
     <title>Listerizer</title>
 </head>
 
-<body class="body">
-    <div class="container-fluid">
-        <div class="row">
+<body class="body container-fluid">
+    <div class="row">
+        <div class="col-12">
             <div class="col-12">
-                <div class="col-12">
-                    <form onsubmit="app.controllers.listController.makeList(event)" class="text-center textBox">
-                        <div class="form-group">
-                            <label for="title">Create New List</label>
-                            <input type="text" class="form-control" name="title" placeholder="New List" id="title"
-                                required>
-                        </div>
-                        <button class="btn btn-primary" type="submit">Submit</button>
-                    </form>
-                    <div id="lists" class="row justify-content-center pt-3">
-
+                <form onsubmit="app.controllers.listController.makeList(event)" class="text-center textBox">
+                    <div class="form-group">
+                        <label for="title">Create New List</label>
+                        <input type="text" class="form-control" name="title" placeholder="New List" id="title" required>
                     </div>
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                </form>
+                <div id="lists" class="row justify-content-center pt-3  ">
+
                 </div>
             </div>
         </div>

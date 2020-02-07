@@ -34,14 +34,12 @@ export default class ValuesService {
                     swal("Your imaginary file is safe!");
                 }
             });
-
         // if (window.confirm("Do you really want to delete your chore")) {
         //     _state.lists[listIndex].chore.splice(choreIndex, 1)
         // }
         // this.saveLists()
     }
     deleteList(index, callback) {
-
         swal({
             title: "Are you sure?",
             text: "Once deleted, you will not be able to recover this imaginary file!",

@@ -8,8 +8,8 @@ export default class List {
     getTemplate(index) {
         let template =
             `
-        <div class="col-12-sm col-4-md justify-content-center border box">
-                <h3 class="text-center">${this.title}</h3>  
+        <div class="col-12-sm col-4-md m-1 justify-content-center border box">
+        <h3 class="text-center">${this.title}</h3>  
         <ul class="smallText">`
         template += this.drawChores(index)
         template += ` </ul>
