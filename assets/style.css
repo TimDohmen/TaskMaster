@@ -31,7 +31,7 @@ background-repeat: no-repeat;
     text-shadow: -1px -1px 0px black, 1px -1px 0px black, -1px 1px 0px black, 1px 1px 0px black;
 cursor: pointer;
 }
-#choreForm{
+.choreForm{
           position: absolute;
     bottom: 0.5rem;
     
@@ -42,7 +42,7 @@ cursor: pointer;
   color: black;
     text-shadow: -1px -1px 0px white, 1px -1px 0px white, -1px 1px 0px white, 1px 1px 0px white;
 
-  padding-bottom: 2.5rem ;
+  padding-bottom: 2rem ;
 }
 
 .textBox{

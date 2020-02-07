@@ -15,7 +15,7 @@ export default class List {
         <ul class="smallText">`
         template += this.drawChores(index)
         template += ` </ul>
-        <form onsubmit="app.controllers.listController.addChore(event, ${index})" id="choreForm" class="form-inline justify-content-center"> 
+        <form onsubmit="app.controllers.listController.addChore(event, ${index})" id="choreForm${index}" class="form-inline choreForm justify-content-center"> 
         <div class="form-group">
         <label for="chore"></label>
         <input type="text" class="form-control" name="chore"  placeholder="Chores To Do" required>
