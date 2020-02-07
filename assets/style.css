@@ -27,14 +27,15 @@ background-repeat: no-repeat;
 .trashcan{
   position: absolute;
   color: red;
-  margin-top: .5rem;
-  margin-left: .5rem;
+  margin-top: .75rem;
+  margin-left: .25rem;
     text-shadow: -1px -1px 0px black, 1px -1px 0px black, -1px 1px 0px black, 1px 1px 0px black;
 
 }
 #choreForm{
           position: absolute;
     bottom: 0.5rem;
+    
 }
 
 .box{
@@ -42,7 +43,7 @@ background-repeat: no-repeat;
   color: black;
     text-shadow: -1px -1px 0px white, 1px -1px 0px white, -1px 1px 0px white, 1px 1px 0px white;
 
-  padding-bottom: 5px ;
+  padding-bottom: 2.5rem ;
 }
 
 .textBox{
