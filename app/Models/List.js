@@ -8,7 +8,7 @@ export default class List {
     getTemplate(index) {
         let template =
             `
-        <div class="col-sm-12 col-md-3 m-1 justify-content-center border box">
+        <div class="col-12 col-lg-3 m-1 justify-content-center border box">
 <i class="fa fa-trash trashcan" onclick="app.controllers.listController.deleteList(${index})"></i>
         
         <h3 class="text-center">${this.title}</h3>  
