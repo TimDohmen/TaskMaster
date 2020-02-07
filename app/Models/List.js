@@ -8,19 +8,20 @@ export default class List {
     getTemplate(index) {
         let template =
             `
-        <div class="col-12-sm col-4-md m-1 justify-content-center border box">
+        <div class="col-sm-12 col-md-3 m-1 justify-content-center border box">
+<i class="fa fa-trash trashcan" onclick="app.controllers.listController.deleteList(${index})"></i>
+        
         <h3 class="text-center">${this.title}</h3>  
         <ul class="smallText">`
         template += this.drawChores(index)
         template += ` </ul>
-        <form onsubmit="app.controllers.listController.addChore(event, ${index})" class="form-inline justify-content-center"> 
+        <form onsubmit="app.controllers.listController.addChore(event, ${index})" id="choreForm" class="form-inline justify-content-center"> 
         <div class="form-group">
         <label for="chore"></label>
-        <input type="text" class="form-control" name="chore" placeholder="Chores To Do" required>
+        <input type="text" class="form-control" name="chore"  placeholder="Chores To Do" required>
         </div>
-        <button type="submit" class = "btn btn-info float-right"> Add
-        <button type ="button" onclick="app.controllers.listController.deleteList(${index})" class ="btn btn-danger float-left removeButton" > Remove List </button>
-             </button>
+        
+        <button type="submit" class = "btn btn-info float-right"> Add  </button>
                 </form>
                </div>
 `

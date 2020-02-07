@@ -13,6 +13,7 @@ function _drawLists() {
     document.querySelector("#lists").innerHTML = template
 }
 
+let listForm = document.querySelector("#listForm")
 
 //Public
 export default class ListController {
@@ -33,6 +34,7 @@ export default class ListController {
             title: event.target.title.value
         }
         _listService.makeList(newList)
+        listForm.reset()
         _drawLists()
     };
     addChore(event, listIndex) {

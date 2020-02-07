@@ -10,11 +10,13 @@
     <title>Listerizer</title>
 </head>
 
+
 <body class="body container-fluid">
     <div class="row">
         <div class="col-12">
             <div class="col-12">
-                <form onsubmit="app.controllers.listController.makeList(event)" class="text-center textBox">
+                <form onsubmit="app.controllers.listController.makeList(event)" class="text-center textBox"
+                    id="listForm">
                     <div class="form-group">
                         <label for="title">Create New List</label>
                         <input type="text" class="form-control" name="title" placeholder="New List" id="title" required>
@@ -29,6 +31,7 @@
 
     </div>
 
+    <script src="https://kit.fontawesome.com/805f26c2b2.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="app/main.js" type="module"></script>
 </body>

@@ -24,6 +24,19 @@ background-repeat: no-repeat;
 
 }
 
+.trashcan{
+  position: absolute;
+  color: red;
+  margin-top: .5rem;
+  margin-left: .5rem;
+    text-shadow: -1px -1px 0px black, 1px -1px 0px black, -1px 1px 0px black, 1px 1px 0px black;
+
+}
+#choreForm{
+          position: absolute;
+    bottom: 0.5rem;
+}
+
 .box{
   background-color: rgba(255, 255, 255, .7);
   color: black;
@@ -39,5 +52,5 @@ background-repeat: no-repeat;
 .smallText{
   color: black;
     text-shadow: -1px -1px 0px white, 1px -1px 0px white, -1px 1px 0px white, 1px 1px 0px white;
-
+padding-bottom: .3rem;
 }
